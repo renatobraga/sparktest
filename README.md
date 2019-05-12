@@ -21,14 +21,14 @@ val counts = textFile.flatMap(line => line.split(" ")) <br>
 counts.saveAsTextFile("hdfs://...") <br>
 ------------
 ```diff
-+ Script de teste do código disponível em /semantix/scala-solucao.sh
++ Script de teste do código disponível em https://github.com/renatobraga/sparktest/tree/master/semantix/scala-solucao.sh
 ```
 O código lê um arquivo no hdfs, executa uma tarefa de contagem de palavras presente no arquivo e grava o resultado da contagem em um arquivo no hdfs.
 
 ## HTTP requests to the NASA Kennedy Space Center WWW server
 ------------
 ```diff
-+ Script com a resolucao disponível em /semantix/http-requests-solucao.sh
++ Script com a resolucao disponível em https://github.com/renatobraga/sparktest/tree/master/semantix/http-requests-solucao.sh
 ```
 #### 1. Número de hosts únicos.
 137979 hosts únicos
