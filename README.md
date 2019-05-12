@@ -1,4 +1,4 @@
-# Resolução do desafio engenheiro de dados proposto pela Semantix
+# Resolução do desafio engenheiro de dados
 ```diff
 + Todos os códigos desenvolvidos então disponíveis no diretório semantix
 ```
