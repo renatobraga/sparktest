@@ -5,13 +5,13 @@
 ### Qual o objetivo do comando cache em Spark?
 Armazenar um RDD na memória para poder ser reutilizado por todo o processo.
 ### O mesmo código implementado em Spark é normalmente mais rápido que a implementação equivalente em MapReduce. Por quê?
-O mapreduce necessita gravar seus resultados parciais em disco causando um maior overhead de rede e IO. O spark tem a capacidade de armazenar os resultados intermediarios em memória (cache), reduzindo a leitura e escrita em disco, otimizando o uso do processador, normalmente sendo mais rapido que o mesmo processo implementado em mapreduce.
+O mapreduce necessita gravar seus resultados parciais em disco causando um maior overhead de rede e IO. O spark tem a capacidade de armazenar os resultados intermediários em memória (cache), reduzindo a leitura e escrita em disco, otimizando o uso do processador, normalmente sendo mais rápido que o mesmo processo implementado em mapreduce.
 ### Qual é a função do SparkContext?
-O SparkContext configura os serviços disponíveis e disponibiliza o acesso ao ambiente distribuido do Spark. Após criamos um sparkContext podemos utiliza-lo para criar RDDs, acessar todos os serviços e executar as tarefas desejadas.
+O SparkContext configura os serviços disponíveis e disponibiliza o acesso ao ambiente distribuído do Spark. Após criarmos um sparkContext podemos utilizá-lo para criar RDDs, acessar todos os serviços e executar as tarefas desejadas.
 ### Explique com suas palavras  o que é Resilient Distributed Datasets (RDD).
-Um RDD é a abstração de um conjunto de dados do Spark, esse conjunto é distrubido pelo cluster e possui tolerancia a falhas, ou seja, o spark é capaz de reprocessar partições ausentes ou danificadas devido a falha de um ou mais nós do cluster.
+Um RDD é a abstração de um conjunto de dados do Spark, esse conjunto é distribuído pelo cluster e possui tolerância à falhas, ou seja, o spark é capaz de reprocessar partições ausentes ou danificadas devido a falha de um ou mais nós do cluster.
 ### GroupByKey é menos eficiente que reduceByKey em grandes dataset. Por quê?
-O reduceByKey combina o resultado de cada partição e gera apenas uma saida para cada key para enviar para o proximo worker, já o groupByKey envia cada key para seu respectivo worker (para que o worker faça a combinação total). Em grandes datasets o groupByKey vai ser menos eficiente pois ele causa maior trafego de rede e aumenta a probabilidade de sobre carregar a memória do worker que irá fazer a combinação gerando IO em disco.
+O reduceByKey combina o resultado de cada partição e gera apenas uma saída para cada key para enviar para o próximo worker, já o groupByKey envia cada key para seu respectivo worker (para que o worker faça a combinação total). Em grandes datasets o groupByKey será menos eficiente pois ele causa maior tráfego de rede e aumenta a probabilidade de sobrecarregar a memória do worker que fará a combinação gerando IO em disco.
 ### Explique o que o código Scala abaixo faz.
 ------------
 val textFile = sc.textFile("hdfs://...") <br>
